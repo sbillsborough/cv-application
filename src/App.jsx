@@ -1,12 +1,10 @@
 import "./App.css";
-import { Header } from "./Header.jsx";
-import { Footer } from "./Footer.jsx";
+import { GeneralInformation } from "./GeneralInformation.jsx";
 
 function App() {
   return (
     <>
-      <Header />
-      <Footer />
+      <GeneralInformation />
     </>
   );
 }
