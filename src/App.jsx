@@ -1,5 +1,5 @@
 import "./App.css";
-import { GeneralInformation } from "./GeneralInformation.jsx";
+import { GeneralInformation } from "./components/GeneralInformation.jsx";
 
 function App() {
   return (
