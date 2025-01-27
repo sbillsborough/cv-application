@@ -13,7 +13,10 @@ function GeneralInformation() {
       ...prevGeneralInformation,
       fullName: event.target.value,
     }));
+    return generalInformation.fullName;
   };
+
+  console.log("Current state:", generalInformation.fullName);
 
   return (
     <>
