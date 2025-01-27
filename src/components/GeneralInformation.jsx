@@ -13,23 +13,7 @@ function GeneralInformation() {
       ...prevGeneralInformation,
       [fieldName]: event.target.value,
     }));
-    return generalInformation[fullName];
-  };
-
-  const handleEmailInput = (event) => {
-    setGeneralInformation((prevGeneralInformation) => ({
-      ...prevGeneralInformation,
-      email: event.target.value,
-    }));
-    return generalInformation.email;
-  };
-
-  const handlePhoneNumberInput = (event) => {
-    setGeneralInformation((prevGeneralInformation) => ({
-      ...prevGeneralInformation,
-      phoneNumber: event.target.value,
-    }));
-    return generalInformation.phoneNumber;
+    return generalInformation[fieldName];
   };
 
   console.log("Current state fullName:", generalInformation.fullName);
@@ -43,19 +27,25 @@ function GeneralInformation() {
       <input
         type="text"
         value={generalInformation.fullName}
-        onChange={handleInput("fullName")}
+        onChange={(e) => {
+          handleInput(e, "fullName");
+        }}
       />
       <h3>Email: {generalInformation.email}</h3>
       <input
         type="text"
         value={generalInformation.email}
-        onChange={handleEmailInput}
+        onChange={(e) => {
+          handleInput(e, "email");
+        }}
       />
-      <h3>Phone Number: </h3>
+      <h3>Phone Number: {generalInformation.phoneNumber}</h3>
       <input
         type="text"
         value={generalInformation.phoneNumber}
-        onChange={handlePhoneNumberInput}
+        onChange={(e) => {
+          handleInput(e, "phoneNumber");
+        }}
       />
       <EditButton />
     </>
@@ -64,7 +54,6 @@ function GeneralInformation() {
 
 export { GeneralInformation };
 
-// [17:27] Oliver Dunn
 //   const handleEmailInput = (event) => {
 
 //     setGeneralInformation((prevGeneralInformation) => ({
