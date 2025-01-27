@@ -8,12 +8,12 @@ function GeneralInformation() {
     phoneNumber: "",
   });
 
-  const handleNameInput = (event) => {
+  const handleInput = (event, fieldName) => {
     setGeneralInformation((prevGeneralInformation) => ({
       ...prevGeneralInformation,
-      fullName: event.target.value,
+      [fieldName]: event.target.value,
     }));
-    return generalInformation.fullName;
+    return generalInformation[fullName];
   };
 
   const handleEmailInput = (event) => {
@@ -43,7 +43,7 @@ function GeneralInformation() {
       <input
         type="text"
         value={generalInformation.fullName}
-        onChange={handleNameInput}
+        onChange={handleInput("fullName")}
       />
       <h3>Email: {generalInformation.email}</h3>
       <input
@@ -63,3 +63,35 @@ function GeneralInformation() {
 }
 
 export { GeneralInformation };
+
+// [17:27] Oliver Dunn
+//   const handleEmailInput = (event) => {
+
+//     setGeneralInformation((prevGeneralInformation) => ({
+
+//       ...prevGeneralInformation,
+
+//       email: event.target.value,
+
+//     }));
+
+//     return generalInformation.email;
+
+//   };
+//  //////////////////////////////////////////////////////
+
+//   const handleInput = (event, name) => {
+
+//     setGeneralInformation((prevGeneralInformation) => ({
+
+//       ...prevGeneralInformation,
+
+//       [name]: event.target.value,
+
+//     }));
+
+//     return generalInformation[name]
+
+//   };
+
+// handleInput(event, "email")
