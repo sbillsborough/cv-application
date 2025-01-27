@@ -16,7 +16,16 @@ function GeneralInformation() {
     return generalInformation.fullName;
   };
 
-  console.log("Current state:", generalInformation.fullName);
+  const handleEmailInput = (event) => {
+    setGeneralInformation((prevGeneralInformation) => ({
+      ...prevGeneralInformation,
+      email: event.target.value,
+    }));
+    return generalInformation.email;
+  };
+
+  console.log("Current state fullName:", generalInformation.fullName);
+  console.log("Current state email:", generalInformation.email);
 
   return (
     <>
@@ -26,6 +35,12 @@ function GeneralInformation() {
         type="text"
         value={generalInformation.fullName}
         onChange={handleNameInput}
+      />
+      <h3>Email: {generalInformation.email}</h3>
+      <input
+        type="text"
+        value={generalInformation.email}
+        onChange={handleEmailInput}
       />
       <EditButton />
     </>
