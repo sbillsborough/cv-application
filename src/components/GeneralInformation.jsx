@@ -53,34 +53,3 @@ function GeneralInformation() {
 }
 
 export { GeneralInformation };
-
-//   const handleEmailInput = (event) => {
-
-//     setGeneralInformation((prevGeneralInformation) => ({
-
-//       ...prevGeneralInformation,
-
-//       email: event.target.value,
-
-//     }));
-
-//     return generalInformation.email;
-
-//   };
-//  //////////////////////////////////////////////////////
-
-//   const handleInput = (event, name) => {
-
-//     setGeneralInformation((prevGeneralInformation) => ({
-
-//       ...prevGeneralInformation,
-
-//       [name]: event.target.value,
-
-//     }));
-
-//     return generalInformation[name]
-
-//   };
-
-// handleInput(event, "email")
