@@ -13,7 +13,6 @@ function EducationalExperience() {
       ...prevEducationalExperience,
       [fieldName]: event.target.value,
     }));
-    return generalInformation[fieldName];
   };
 
   return (
