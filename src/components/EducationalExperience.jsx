@@ -1,3 +1,5 @@
+import { EditButton } from "./EditButton";
+
 function EducationalExperience() {
   return (
     <>
@@ -5,6 +7,7 @@ function EducationalExperience() {
       <h3>School name:</h3>
       <h3>Title of study:</h3>
       <h3>Date of study</h3>
+      <EditButton />
     </>
   );
 }
