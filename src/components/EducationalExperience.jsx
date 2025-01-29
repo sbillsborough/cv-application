@@ -26,8 +26,22 @@ function EducationalExperience() {
           handleInput(e, "schoolName");
         }}
       />
-      <h3>Title of study:</h3>
-      <h3>Date of study</h3>
+      <h3>Title of study: {educationalExperience.studyTitle}</h3>
+      <input
+        type="text"
+        value={educationalExperience.studyTitle}
+        onChange={(e) => {
+          handleInput(e, "studyTitle");
+        }}
+      />
+      <h3>Date of study (MM/YY - MM/YY): {educationalExperience.studyDate}</h3>
+      <input
+        type="text"
+        value={educationalExperience.studyDate}
+        onChange={(e) => {
+          handleInput(e, "studyDate");
+        }}
+      />
       <EditButton />
     </>
   );
