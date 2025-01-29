@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { EditButton } from "./EditButton";
+import { SaveButton } from "./SaveButton";
 
 function EducationalExperience() {
   const [educationalExperience, setEducationalExperience] = useState({
@@ -42,7 +42,7 @@ function EducationalExperience() {
           handleInput(e, "studyDate");
         }}
       />
-      <EditButton />
+      <SaveButton />
     </>
   );
 }

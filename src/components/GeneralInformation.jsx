@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { EditButton } from "./EditButton";
+import { SaveButton } from "./SaveButton";
 
 function GeneralInformation() {
   const [generalInformation, setGeneralInformation] = useState({
@@ -46,7 +46,7 @@ function GeneralInformation() {
           handleInput(e, "phoneNumber");
         }}
       />
-      <EditButton />
+      <SaveButton />
     </>
   );
 }
