@@ -16,6 +16,10 @@ function PracticalExperience() {
     }));
   };
 
+  const handleSave = () => {
+    console.log("Saving Practical Experience:", practicalExperience);
+  };
+
   return (
     <>
       <h2>Practical Experience</h2>
@@ -26,6 +30,7 @@ function PracticalExperience() {
         onChange={(e) => {
           handleInput(e, "companyName");
         }}
+        placeholder="Company Name"
       />
       <h3>Position Title: {practicalExperience.positionTitle}</h3>
       <input
@@ -34,6 +39,7 @@ function PracticalExperience() {
         onChange={(e) => {
           handleInput(e, "positionTitle");
         }}
+        placeholder="Position"
       />
       <h3>Responsibilities: {practicalExperience.responsibilities}</h3>
       <input
@@ -42,6 +48,7 @@ function PracticalExperience() {
         onChange={(e) => {
           handleInput(e, "responsibilities");
         }}
+        placeholder="Responsibilities"
       />
       <h3>
         Employment Date from - to (MM/YY): {practicalExperience.employmentDate}
@@ -52,8 +59,9 @@ function PracticalExperience() {
         onChange={(e) => {
           handleInput(e, "employmentDate");
         }}
+        placeholder="Employment Date"
       />
-      <SaveButton />
+      <SaveButton handleClick={handleSave} data={practicalExperience} />
     </>
   );
 }

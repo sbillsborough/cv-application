@@ -1,5 +1,13 @@
-function SaveButton() {
-  return <button>Save</button>;
+function SaveButton({ handleClick, data }) {
+  return (
+    <button
+      onClick={() => {
+        handleClick(data);
+      }}
+    >
+      Save
+    </button>
+  );
 }
 
 export { SaveButton };
