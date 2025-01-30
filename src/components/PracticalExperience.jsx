@@ -19,6 +19,40 @@ function PracticalExperience() {
   return (
     <>
       <h2>Practical Experience</h2>
+      <h3>Company Name: {practicalExperience.companyName}</h3>
+      <input
+        type="text"
+        value={practicalExperience.companyName}
+        onChange={(e) => {
+          handleInput(e, "companyName");
+        }}
+      />
+      <h3>Position Title: {practicalExperience.positionTitle}</h3>
+      <input
+        type="text"
+        value={practicalExperience.positionTitle}
+        onChange={(e) => {
+          handleInput(e, "positionTitle");
+        }}
+      />
+      <h3>Responsibilities: {practicalExperience.responsibilities}</h3>
+      <input
+        type="text"
+        value={practicalExperience.responsibilities}
+        onChange={(e) => {
+          handleInput(e, "responsibilities");
+        }}
+      />
+      <h3>
+        Employment Date from - to (MM/YY): {practicalExperience.employmentDate}
+      </h3>
+      <input
+        type="text"
+        value={practicalExperience.employmentDate}
+        onChange={(e) => {
+          handleInput(e, "employmentDate");
+        }}
+      />
       <SaveButton />
     </>
   );
