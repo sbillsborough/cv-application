@@ -9,6 +9,13 @@ function PracticalExperience() {
     employmentDate: "",
   });
 
+  const handleInput = (event, fieldName) => {
+    setPracticalExperience((prevPracticalExperience) => ({
+      ...prevPracticalExperience,
+      [fieldName]: event.target.value,
+    }));
+  };
+
   return (
     <>
       <h2>Practical Experience</h2>
