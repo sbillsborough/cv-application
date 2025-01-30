@@ -15,6 +15,10 @@ function EducationalExperience() {
     }));
   };
 
+  const handleSave = () => {
+    console.log("Saving Educational Experience:", educationalExperience);
+  };
+
   return (
     <>
       <h2>Educational Experience</h2>
@@ -25,6 +29,7 @@ function EducationalExperience() {
         onChange={(e) => {
           handleInput(e, "schoolName");
         }}
+        placeholder="School Name"
       />
       <h3>Title of study: {educationalExperience.studyTitle}</h3>
       <input
@@ -33,6 +38,7 @@ function EducationalExperience() {
         onChange={(e) => {
           handleInput(e, "studyTitle");
         }}
+        placeholder="Subject"
       />
       <h3>Date of study (MM/YY - MM/YY): {educationalExperience.studyDate}</h3>
       <input
@@ -41,8 +47,9 @@ function EducationalExperience() {
         onChange={(e) => {
           handleInput(e, "studyDate");
         }}
+        placeholder="from (MM/YY) to (MM/YY)"
       />
-      <SaveButton />
+      <SaveButton handleClick={handleSave} data={educationalExperience} />
     </>
   );
 }

@@ -15,9 +15,9 @@ function GeneralInformation() {
     }));
   };
 
-  console.log("Current state fullName:", generalInformation.fullName);
-  console.log("Current state email:", generalInformation.email);
-  console.log("Current state phoneNumber:", generalInformation.phoneNumber);
+  const handleSave = () => {
+    console.log("Saving General Information:", generalInformation);
+  };
 
   return (
     <>
@@ -29,6 +29,7 @@ function GeneralInformation() {
         onChange={(e) => {
           handleInput(e, "fullName");
         }}
+        placeholder="Full Name"
       />
       <h3>Email: {generalInformation.email}</h3>
       <input
@@ -37,6 +38,7 @@ function GeneralInformation() {
         onChange={(e) => {
           handleInput(e, "email");
         }}
+        placeholder="Email"
       />
       <h3>Phone Number: {generalInformation.phoneNumber}</h3>
       <input
@@ -45,8 +47,9 @@ function GeneralInformation() {
         onChange={(e) => {
           handleInput(e, "phoneNumber");
         }}
+        placeholder="Phone Number"
       />
-      <SaveButton />
+      <SaveButton handleClick={handleSave} data={generalInformation} />
     </>
   );
 }
