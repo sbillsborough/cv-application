@@ -1,5 +1,5 @@
 function SubmitButton() {
-  return <button>Submit</button>;
+  return <button onClick={onSubmit}>Submit</button>;
 }
 
 export { SubmitButton };
