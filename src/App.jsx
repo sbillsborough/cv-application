@@ -21,7 +21,7 @@ function App() {
         onSave={(data) => handleSubmit(null, data, null)}
       />
       <PracticalExperience onSave={(data) => handleSubmit(null, null, data)} />
-      <SubmitButton />
+      <SubmitButton onSubmit={handleSubmit} />
 
       {/* Conditionally display saved data */}
       {savedData && <DisplayInformation data={savedData} />}
