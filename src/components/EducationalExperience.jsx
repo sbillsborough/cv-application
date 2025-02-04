@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { SaveButton } from "./SaveButton";
 
-function EducationalExperience() {
+function EducationalExperience({ onSave }) {
   const [educationalExperience, setEducationalExperience] = useState({
     schoolName: "",
     studyTitle: "",
@@ -13,10 +13,6 @@ function EducationalExperience() {
       ...prevEducationalExperience,
       [fieldName]: event.target.value,
     }));
-  };
-
-  const handleSave = () => {
-    console.log("Saving Educational Experience:", educationalExperience);
   };
 
   return (
@@ -49,7 +45,7 @@ function EducationalExperience() {
         }}
         placeholder="from (MM/YY) to (MM/YY)"
       />
-      <SaveButton handleClick={handleSave} data={educationalExperience} />
+      <SaveButton handleClick={onSave} data={educationalExperience} />
     </>
   );
 }

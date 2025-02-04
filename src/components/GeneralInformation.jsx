@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { SaveButton } from "./SaveButton";
 
-function GeneralInformation() {
+function GeneralInformation({ onSave }) {
   const [generalInformation, setGeneralInformation] = useState({
     fullName: "",
     email: "",
@@ -13,10 +13,6 @@ function GeneralInformation() {
       ...prevGeneralInformation,
       [fieldName]: event.target.value,
     }));
-  };
-
-  const handleSave = () => {
-    console.log("Saving General Information:", generalInformation);
   };
 
   return (
@@ -49,7 +45,7 @@ function GeneralInformation() {
         }}
         placeholder="Phone Number"
       />
-      <SaveButton handleClick={handleSave} data={generalInformation} />
+      <SaveButton handleClick={onSave} data={generalInformation} />
     </>
   );
 }

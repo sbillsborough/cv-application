@@ -30,11 +30,14 @@ function DisplayInformation({ data }) {
         <strong>Company Name:</strong> {data.experience?.companyName}
       </p>
       <p>
-        <strong>Job Title:</strong> {data.experience?.jobTitle}
+        <strong>Job Title:</strong> {data.experience?.positionTitle}
       </p>
       <p>
-        <strong>Years of Experience:</strong>{" "}
-        {data.experience?.yearsOfExperience}
+        <strong>Responsibilities:</strong>
+        {data.experience?.responsibilities}
+      </p>
+      <p>
+        <strong>Years of Experience:</strong> {data.experience?.employmentDate}
       </p>
     </div>
   );
