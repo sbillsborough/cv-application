@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { SaveButton } from "./SaveButton";
 
-function PracticalExperience() {
+function PracticalExperience({ onSave }) {
   const [practicalExperience, setPracticalExperience] = useState({
     companyName: "",
     positionTitle: "",
@@ -14,10 +14,6 @@ function PracticalExperience() {
       ...prevPracticalExperience,
       [fieldName]: event.target.value,
     }));
-  };
-
-  const handleSave = () => {
-    console.log("Saving Practical Experience:", practicalExperience);
   };
 
   return (
@@ -61,7 +57,7 @@ function PracticalExperience() {
         }}
         placeholder="Employment Date"
       />
-      <SaveButton handleClick={handleSave} data={practicalExperience} />
+      <SaveButton handleClick={onSave} data={practicalExperience} />
     </>
   );
 }
