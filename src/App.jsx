@@ -30,7 +30,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className="container">
       <GeneralInformation onSave={(data) => handleSave("generalInfo", data)} />
       <EducationalExperience onSave={(data) => handleSave("education", data)} />
       <PracticalExperience onSave={(data) => handleSave("experience", data)} />
@@ -38,7 +38,7 @@ function App() {
 
       {/* Conditionally display saved data */}
       {savedData && <DisplayInformation data={savedData} />}
-    </>
+    </div>
   );
 }
 
