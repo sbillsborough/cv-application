@@ -1,6 +1,6 @@
 function DisplayInformation({ data }) {
   return (
-    <div>
+    <div className="display-information-container">
       <h2>Submitted Information</h2>
 
       <h3>General Information</h3>
