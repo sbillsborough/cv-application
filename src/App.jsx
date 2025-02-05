@@ -30,7 +30,7 @@ function App() {
   };
 
   return (
-    <div className="container">
+    <div className="enter-information-container">
       <GeneralInformation onSave={(data) => handleSave("generalInfo", data)} />
       <EducationalExperience onSave={(data) => handleSave("education", data)} />
       <PracticalExperience onSave={(data) => handleSave("experience", data)} />
