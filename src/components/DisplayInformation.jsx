@@ -1,6 +1,6 @@
 function DisplayInformation({ data }) {
   return (
-    <div className="display-information-container">
+    <>
       <h2>Submitted Information</h2>
 
       <h3>General Information</h3>
@@ -39,7 +39,7 @@ function DisplayInformation({ data }) {
       <p>
         <strong>Years of Experience:</strong> {data.experience?.employmentDate}
       </p>
-    </div>
+    </>
   );
 }
 

@@ -30,14 +30,23 @@ function App() {
   };
 
   return (
-    <div className="enter-information-container">
-      <GeneralInformation onSave={(data) => handleSave("generalInfo", data)} />
-      <EducationalExperience onSave={(data) => handleSave("education", data)} />
-      <PracticalExperience onSave={(data) => handleSave("experience", data)} />
-      <SubmitButton onSubmit={handleSubmit} />
-
-      {/* Conditionally display saved data */}
-      {savedData && <DisplayInformation data={savedData} />}
+    <div className="outer-container">
+      <div className="enter-information-container">
+        <GeneralInformation
+          onSave={(data) => handleSave("generalInfo", data)}
+        />
+        <EducationalExperience
+          onSave={(data) => handleSave("education", data)}
+        />
+        <PracticalExperience
+          onSave={(data) => handleSave("experience", data)}
+        />
+        <SubmitButton onSubmit={handleSubmit} />
+      </div>
+      <div className="display-information-container">
+        {/* Conditionally display saved data */}
+        {savedData && <DisplayInformation data={savedData} />}
+      </div>
     </div>
   );
 }
